@@ -1,0 +1,53 @@
+/* src/components/Sidebar.css */
+.sidebar {
+  width: 20%;
+  height: 100vh;
+  background-color: #1f1e2e;
+  color: #fff;
+  padding: 20px;
+}
+
+/* Top Section Styles */
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  background-color: #1b1a28;
+}
+
+.name {
+  font-size: 18px;
+}
+
+/* Middle Section Styles */
+.middle-section {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  background-color: #1b1a28;
+}
+
+.name2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Lower Section Styles */
+.lower-section {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  padding: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+}
+
+.option:hover {
+  background-color: #1b1a28;
+}
