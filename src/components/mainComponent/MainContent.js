@@ -1,12 +1,12 @@
 // src/components/MainContent.js
 import React from 'react';
 import './MainContent.css';
+import TopBar from './topBar/topBar';
 
 const MainContent = () => {
      return (
           <div className="main-content">
-               {/* Main content goes here */}
-               Main Content
+               <TopBar />
           </div>
      );
 };

@@ -5,7 +5,7 @@ import Sidebar from "./components/sideBar/sidebar";
 
 function App() {
   return (
-    <div>
+    <div style={{ display: 'flex' }}>
       <Sidebar />
       <MainContent />
     </div>
