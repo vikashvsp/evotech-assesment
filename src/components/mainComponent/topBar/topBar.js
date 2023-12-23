@@ -1,4 +1,3 @@
-// src/components/MiddleSection.js
 import React from 'react';
 
 const TopBar = () => {
