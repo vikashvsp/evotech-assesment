@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import SquColAsset from '../../squareColorAsst/SquColAsset';
 import EqualizerTwoToneIcon from '@mui/icons-material/EqualizerTwoTone';
 import GroupAddTwoToneIcon from '@mui/icons-material/GroupAddTwoTone';
@@ -9,6 +10,8 @@ import { axisClasses } from '@mui/x-charts';
 
 
 const LowerSection = () => {
+     const [selectedTab, setSelectedTab] = useState('Month');
+
      const chartSetting = {
 
           width: 800,
@@ -57,6 +60,46 @@ const LowerSection = () => {
      return (
           <div style={middleSectionStyle}>
                <div style={leftSectionStyle}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                         <div>
+                              <div>
+                                   Recent stats
+                              </div>
+                              <div>
+                                   More than 400+ new members
+                              </div>
+                         </div>
+                         <div style={{ display: 'flex', justifyContent: 'space-between', gap: '8px' }}>
+                              <div
+                                   style={{
+                                        ...tabStyle,
+                                        ...(selectedTab === 'Month' ? selectedTabStyle : {}),
+                                   }}
+                                   onClick={() => setSelectedTab('Month')}
+                              >
+                                   Month
+                              </div>
+                              <div
+                                   style={{
+                                        ...tabStyle,
+                                        ...(selectedTab === 'Week' ? selectedTabStyle : {}),
+                                   }}
+                                   onClick={() => setSelectedTab('Week')}
+                              >
+                                   Week
+                              </div>
+                              <div
+                                   style={{
+                                        ...tabStyle,
+                                        ...(selectedTab === 'Day' ? selectedTabStyle : {}),
+                                   }}
+                                   onClick={() => setSelectedTab('Day')}
+                              >
+                                   Day
+                              </div>
+                         </div>
+                    </div>
+
                     <BarChart
                          dataset={dataset}
                          xAxis={[{ scaleType: 'band', dataKey: 'month' }]}
@@ -115,4 +158,13 @@ const rightSectionStyle = {
      gridTemplateColumns: '1fr 1fr', // Updated property
 };
 
+const tabStyle = {
+     padding: '10px',
+     borderRadius: '8px',
+     cursor: 'pointer',
+};
 
+const selectedTabStyle = {
+     backgroundColor: 'grey',
+     color: 'white',
+};
