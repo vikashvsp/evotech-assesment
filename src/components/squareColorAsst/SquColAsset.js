@@ -12,6 +12,7 @@ const SquColAsset = ({ logo, backgroundColor, text }) => {
      };
 
      const logoStyle = {
+          marginTop: 20
           // Add any specific styles for the logo if needed
      };
 

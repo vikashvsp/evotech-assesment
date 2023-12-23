@@ -4,11 +4,69 @@ import EqualizerTwoToneIcon from '@mui/icons-material/EqualizerTwoTone';
 import GroupAddTwoToneIcon from '@mui/icons-material/GroupAddTwoTone';
 import BorderAllTwoToneIcon from '@mui/icons-material/BorderAllTwoTone';
 import EmailTwoToneIcon from '@mui/icons-material/EmailTwoTone';
+import { BarChart } from '@mui/x-charts/BarChart';
+import { axisClasses } from '@mui/x-charts';
+
 
 const LowerSection = () => {
+     const chartSetting = {
+
+          width: 800,
+          height: 250,
+          sx: {
+               [`.${axisClasses.left} .${axisClasses.label}`]: {
+                    transform: 'translate(-20px, 0)',
+               },
+          },
+     };
+     const dataset = [
+          {
+               london: 59,
+               paris: 57,
+               month: '1 AUG',
+          },
+          {
+               london: 21,
+               paris: 15,
+               month: '8 AUG',
+          },
+          {
+               london: 9,
+               paris: 45,
+               month: '17 AUG',
+          },
+          {
+               london: 35,
+               paris: 56,
+               month: '20 AUG',
+          },
+          {
+               london: 87,
+               paris: 14,
+               month: '29 AUG',
+          },
+          {
+               london: 64,
+               paris: 23,
+               month: '5 SEP',
+          },
+
+     ];
+
+     const valueFormatter = (value) => `${value}mm`;
      return (
           <div style={middleSectionStyle}>
-               <div style={leftSectionStyle}>Left Section</div>
+               <div style={leftSectionStyle}>
+                    <BarChart
+                         dataset={dataset}
+                         xAxis={[{ scaleType: 'band', dataKey: 'month' }]}
+                         series={[
+                              { dataKey: 'london', valueFormatter },
+                              { dataKey: 'paris', valueFormatter },
+                         ]}
+                         {...chartSetting}
+                    />
+               </div>
                <div style={rightSectionStyle}>
                     <SquColAsset logo={<EqualizerTwoToneIcon color='primary' />} backgroundColor={'grey'} text={'Weekly Sales'} />
                     <SquColAsset logo={<GroupAddTwoToneIcon />} backgroundColor={'red'} text={'New Users'} />
