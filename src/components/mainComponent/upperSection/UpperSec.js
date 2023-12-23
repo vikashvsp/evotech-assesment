@@ -33,12 +33,20 @@ export default UpperSec;
 
 // Inline Styles
 const upperSecStyle = {
-     border: '1px solid #ddd',
+     marginTop: '20px',
      display: 'flex',
      height: '40%',
-};
+     alignItems: 'stretch',
 
+};
+const commonSectionStyle = {
+     padding: '20px',
+     borderRadius: '10px',
+     boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+     boxSizing: 'border-box',
+};
 const leftPartStyle = {
+     ...commonSectionStyle,
      flex: '2',
      display: 'flex',
      flexDirection: 'column',
@@ -69,6 +77,8 @@ const leftBottomStyle = {
 };
 
 const rightPartStyle = {
+     ...commonSectionStyle,
+     marginLeft: '10px',
      flex: '1',
      display: 'grid',
      gridTemplateColumns: 'repeat(2, 1fr)',
