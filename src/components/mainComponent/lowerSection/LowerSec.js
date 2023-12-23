@@ -1,13 +1,19 @@
 import React from 'react';
+import SquColAsset from '../../squareColorAsst/SquColAsset';
+import EqualizerTwoToneIcon from '@mui/icons-material/EqualizerTwoTone';
+import GroupAddTwoToneIcon from '@mui/icons-material/GroupAddTwoTone';
+import BorderAllTwoToneIcon from '@mui/icons-material/BorderAllTwoTone';
+import EmailTwoToneIcon from '@mui/icons-material/EmailTwoTone';
 
 const LowerSection = () => {
      return (
           <div style={middleSectionStyle}>
-               <div style={leftSectionStyle}>
-                    Left Section
-               </div>
+               <div style={leftSectionStyle}>Left Section</div>
                <div style={rightSectionStyle}>
-                    Right Section
+                    <SquColAsset logo={<EqualizerTwoToneIcon color='primary' />} backgroundColor={'grey'} text={'Weekly Sales'} />
+                    <SquColAsset logo={<GroupAddTwoToneIcon />} backgroundColor={'red'} text={'New Users'} />
+                    <SquColAsset logo={<BorderAllTwoToneIcon />} backgroundColor={'green'} text={'Item Orders'} />
+                    <SquColAsset logo={<EmailTwoToneIcon />} backgroundColor={'brown'} text={'Bug reports'} />
                </div>
           </div>
      );
@@ -41,5 +47,14 @@ const rightSectionStyle = {
      ...commonSectionStyle,
      flex: '3',
      marginLeft: '10px',
-     backgroundColor: '#f0f0f0', // Make the background color similar to left section
+     backgroundColor: '#f0f0f0',
+     flexDirection: 'column',
+     justifyContent: 'center', // Center vertically
+     alignItems: 'center', // Center horizontally
+
+     height: '100%', // Set a fixed height for the right section,
+     display: 'grid',
+     gridTemplateColumns: '1fr 1fr', // Updated property
 };
+
+
