@@ -23,14 +23,19 @@
 .middle-section {
   display: flex;
   margin-top: 20px;
-  justify-content: space-around;
+  justify-content: left;
+  align-items: center;
   margin-bottom: 20px;
   background-color: #1b1a28;
 }
 
+.layerIcon {
+  margin: 0px 10px;
+}
+
 .name2 {
   font-size: 20px;
-  margin-bottom: 10px;
+  margin: 5px 5px;
 }
 
 /* Lower Section Styles */

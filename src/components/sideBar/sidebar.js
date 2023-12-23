@@ -17,7 +17,7 @@ const Sidebar = () => {
 
                {/* Middle Section */}
                <div className="middle-section">
-                    <LayersIcon />
+                    <LayersIcon className='layerIcon'  />
                     <div className="name2">Dashboard</div>
 
                </div>
