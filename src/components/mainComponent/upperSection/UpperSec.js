@@ -9,8 +9,7 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import Brightness1Icon from '@mui/icons-material/Brightness1';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import TransparentLineChart from '../../../utils/TransparentLineChart';
-
+import { LineChart } from '@mui/x-charts';
 import RedeemIcon from '@mui/icons-material/Redeem';
 import PolylineIcon from '@mui/icons-material/Polyline';
 import FingerprintIcon from '@mui/icons-material/Fingerprint';
@@ -41,13 +40,13 @@ const UpperSec = () => {
                     }}>
                          <div style={{
                               borderRadius: '10px',
-                              background: 'linear-gradient(to bottom, rgba(255,0,0,0.9) 90%, white 30%)',
+                              background: 'linear-gradient(to bottom, rgba(255,0,0,0.5) 90%, white 30%)',
                               padding: '10px',
                               flex: 1,
                          }}>
                               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                                    <div>Sales Progress</div>
-                                   <div style={{ display: 'flex', backgroundColor: 'rgba(255, 255, 255, 0.5s)', padding: '2px', borderRadius: '5px', height: '20px' }}>
+                                   <div style={{ display: 'flex', backgroundColor: 'rgba(255, 255, 255, 0.5)', padding: '2px', borderRadius: '5px', height: '20px' }}>
                                         <div style={{ fontSize: '12px', marginRight: '5px' }}>Export</div>
                                         <div>
                                              <KeyboardArrowDownIcon style={{ height: '20px' }} />
@@ -56,7 +55,20 @@ const UpperSec = () => {
 
                               </div>
                               <div>
-                                   <TransparentLineChart data={chartData} labels={chartLabels} />
+                                   <LineChart
+                                        // xAxis={[{ data: [0, 1, 2, 3, 5, 8, 10] }]}
+                                        series={[
+                                             {
+                                                  data: [0, 2, 5.5, 2, 8.5, 1.5, 5],
+                                                  area: true,
+                                                  color: 'red'
+                                             },
+                                        ]}
+                                        width={400}
+                                        height={200}
+                                        leftAxis={null}
+                                        bottomAxis={null}
+                                   />
                               </div>
                          </div>
                          <div style={{ borderRadius: '10px', backgroundColor: 'white', padding: '10px', flex: 1, overflow: 'hidden' }}>
