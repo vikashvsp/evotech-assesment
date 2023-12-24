@@ -13,7 +13,6 @@ import image1 from '../../../../src/assets/images/Pinterest-logo.png';
 import image2 from '../../../../src/assets/images/png-transparent-telegram-logo-computer-icons-telegram-logo-blue-angle-triangle-thumbnail.png';
 import image3 from '../../../../src/assets/images/puzzle_icon_149707.png';
 import image4 from '../../../../src/assets/images/bing-color-icon.png'
-import image5 from '../../../../src/assets/images/7547428.png';
 
 const MiddleSection = () => {
      const [selectedTab, setSelectedTab] = useState('Month');
@@ -367,7 +366,7 @@ const middleSectionStyle = {
 const commonSectionStyle = {
      padding: '20px',
      borderRadius: '10px',
-     boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+     boxShadow: '0 0 10px rgba(0, 0, 255, 0.1)',
      boxSizing: 'border-box',
 };
 
@@ -391,6 +390,6 @@ const tabStyle = {
 };
 
 const selectedTabStyle = {
-     backgroundColor: 'grey',
+     backgroundColor: 'black',
      color: 'white',
 };

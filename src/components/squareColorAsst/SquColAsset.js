@@ -17,6 +17,7 @@ const SquColAsset = ({ logo, backgroundColor, text }) => {
 
      const logoStyle = {
           marginTop: 20,
+          marginBottom: -10
      };
 
      const handleHover = () => {

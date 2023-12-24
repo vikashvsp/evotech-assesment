@@ -1,28 +1,86 @@
 import React from 'react';
-
+import SquColAsset from '../../squareColorAsst/SquColAsset';
+import MenuIcon from '@mui/icons-material/Menu';
+import CategoryIcon from '@mui/icons-material/Category';
+import TheatersIcon from '@mui/icons-material/Theaters';
+import EqualizerIcon from '@mui/icons-material/Equalizer';
+import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+import Brightness1Icon from '@mui/icons-material/Brightness1';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import TransparentLineChart from '../../../utils/TransparentLineChart';
 const UpperSec = () => {
+     const chartData = [10, 20, 15, 25, 18];
+     const chartLabels = ['Label 1', 'Label 2', 'Label 3', 'Label 4', 'Label 5'];
+
      return (
           <div style={upperSecStyle}>
                <div style={leftPartStyle}>
                     <div style={leftTopStyle}>
-                         <div style={squareStyle}>1</div>
-                         <div style={squareStyle}>2</div>
-                         <div style={squareStyle}>3</div>
-                         <div style={squareStyle}>4</div>
-                         <div style={squareStyle}>5</div>
-                    </div>
-                    <div style={leftBottomStyle}>
-                         <div style={squareStyle}>5</div>
-                         <div style={squareStyle}>5</div>
+                         <SquColAsset logo={<MenuIcon color="disabled" />} backgroundColor={'white'} text={'SaaS Application'} />
+                         <SquColAsset logo={<CategoryIcon color="disabled" />} backgroundColor={'white'} text={'Main Categories'} />
+                         <SquColAsset logo={<TheatersIcon color="disabled" />} backgroundColor={'white'} text={'Video Tutorials'} />
+                         <SquColAsset logo={<EqualizerIcon color="disabled" />} backgroundColor={'white'} text={'Sales Statistics'} />
+                         <SquColAsset logo={<VerifiedUserIcon color="disabled" />} backgroundColor={'white'} text={'ARC    Security'} />
 
                     </div>
+                    <div style={{
+                         display: 'flex',
+                         gap: '10px',
+                         padding: '10px',
+                         justifyContent: 'space-between',
+                         height: '100%'
+                    }}>
+                         <div style={{
+                              borderRadius: '10px',
+                              background: 'linear-gradient(to bottom, red 90%, white 30%)',
+                              padding: '10px',
+                              flex: 1,
+                         }}>
+                              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                   <div>Sales Progress</div>
+                                   <div style={{ display: 'flex', backgroundColor: 'rgba(255, 255, 255, 0.5)', padding: '2px', borderRadius: '5px', height: '20px' }}>
+                                        <div style={{ fontSize: '12px', marginRight: '5px' }}>Export</div>
+                                        <div>
+                                             <KeyboardArrowDownIcon style={{ height: '20px' }} />
+                                        </div>
+                                   </div>
+
+                              </div>
+                              <div>
+                                   <TransparentLineChart data={chartData} labels={chartLabels} />
+                              </div>
+                         </div>
+                         <div style={{ borderRadius: '10px', backgroundColor: 'white', padding: '10px', flex: 1, overflow: 'hidden' }}>
+                              <VerticalTimeline lineColor='black' animate={true} layout='2-column-left'>
+
+                                   <VerticalTimelineElement
+                                        visible={false}
+                                        className="vertical-timeline-element--work"
+                                        contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff', fontSize: '10px', }}
+                                        contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)', }}
+                                        date="8:42 PM"
+                                        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                                        icon={<Brightness1Icon />
+                                        }
+                                   >
+                                        <p className="vertical-timeline-element-title">Outlines keep you honest. indulging in poorly driving and keep structure.</p>
+
+                                   </VerticalTimelineElement>
+                              </VerticalTimeline>
+                         </div>
+                    </div>
+
+
                </div>
-               <div style={rightPartStyle}><div style={squareStyle}>1</div>
-                    <div style={squareStyle}>2</div>
-                    <div style={squareStyle}>3</div>
-                    <div style={squareStyle}>4</div>
-                    <div style={squareStyle}>5</div>
-                    <div style={squareStyle}>6</div>
+               <div style={rightPartStyle}>
+                    <SquColAsset logo={<MenuIcon color='primary' />} backgroundColor={'white'} text={'Weekly Sales'} />
+                    <SquColAsset logo={<MenuIcon color='primary' />} backgroundColor={'white'} text={'Weekly Sales'} />
+                    <SquColAsset logo={<MenuIcon color='primary' />} backgroundColor={'white'} text={'Weekly Sales'} />
+                    <SquColAsset logo={<MenuIcon color='primary' />} backgroundColor={'white'} text={'Weekly Sales'} />
+                    <SquColAsset logo={<MenuIcon color='primary' />} backgroundColor={'white'} text={'Weekly Sales'} />
+                    <SquColAsset logo={<MenuIcon color='primary' />} backgroundColor={'white'} text={'Weekly Sales'} />
 
                </div>
           </div>
@@ -35,14 +93,15 @@ export default UpperSec;
 const upperSecStyle = {
      marginTop: '20px',
      display: 'flex',
-     height: '40%',
+     height: '60%',
      alignItems: 'stretch',
+
 
 };
 const commonSectionStyle = {
      padding: '20px',
      borderRadius: '10px',
-     boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+     boxShadow: '0 0 10px rgba(0, 0, 255, 0.1)',
      boxSizing: 'border-box',
 };
 const leftPartStyle = {
@@ -50,31 +109,21 @@ const leftPartStyle = {
      flex: '2',
      display: 'flex',
      flexDirection: 'column',
+     backgroundColor: '#f0f0f0', // Make the background color similar to left section
+
 };
 
 const leftTopStyle = {
      display: 'flex',
      gap: '8px',
-     padding: '10px',
-     borderBottom: '1px solid #ddd',
+     padding: '5px',
+     justifyContent: 'space-between',
+     // marginBottom: '20px'
 };
 
-const squareStyle = {
-     width: '50px',
-     height: '50px',
-     backgroundColor: '#ddd',
-     display: 'flex',
-     alignItems: 'center',
-     justifyContent: 'center',
-     fontSize: '16px',
-     fontWeight: 'bold',
-};
 
-const leftBottomStyle = {
-     display: 'flex',
-     gap: '10px',
-     padding: '10px',
-};
+
+
 
 const rightPartStyle = {
      ...commonSectionStyle,
@@ -84,4 +133,6 @@ const rightPartStyle = {
      gridTemplateColumns: 'repeat(2, 1fr)',
      gap: '8px',
      padding: '10px',
+     backgroundColor: '#f0f0f0', // Make the background color similar to left section
+
 };
