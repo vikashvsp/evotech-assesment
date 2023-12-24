@@ -49,8 +49,8 @@ const MiddleSection = () => {
                     <div>
                          <GrowOnHoverContainer>
                               <div style={{ display: 'flex', alignItems: 'center', marginTop: '10px', marginRight: '10px', marginBottom: '1px' }}>
-                                   <div style={{ transform: 'rotateX(20deg)', background: '#BF40BF', opacity: 0.7, borderRadius: '20%', marginRight: '20px' }}>
-                                        <MenuIcon />
+                                   <div style={{ transform: 'rotateX(20deg)', background: '#BF40BF', opacity: 0.7, borderRadius: '20%', marginRight: '20px', padding: '4px' }}>
+                                        <MenuIcon fontSize="small" />
                                    </div>
                                    <div>
                                         <div style={{ fontSize: '15px', fontWeight: 'bold' }}>Briv<b>bia</b> Saas</div>
@@ -61,8 +61,8 @@ const MiddleSection = () => {
                          <GrowOnHoverContainer>
 
                               <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1px' }}>
-                                   <div style={{ transform: 'rotateX(20deg)', background: 'yellow', opacity: 0.7, borderRadius: '20%', marginRight: '20px' }}>
-                                        <MicIcon />
+                                   <div style={{ transform: 'rotateX(20deg)', background: 'yellow', opacity: 0.7, borderRadius: '20%', marginRight: '20px', padding: '4px' }}>
+                                        <MicIcon fontSize="small" />
                                    </div>
                                    <div>
                                         <div style={{ fontSize: '15px', fontWeight: 'bold' }}>Briv<b>bia</b> Saas</div>
@@ -73,8 +73,8 @@ const MiddleSection = () => {
                          <GrowOnHoverContainer>
 
                               <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1px' }}>
-                                   <div style={{ transform: 'rotateX(20deg)', background: 'green', opacity: 0.7, borderRadius: '20%', marginRight: '20px' }}>
-                                        <QuestionAnswerIcon />
+                                   <div style={{ transform: 'rotateX(20deg)', background: 'green', opacity: 0.7, borderRadius: '20%', marginRight: '20px', padding: '4px' }}>
+                                        <QuestionAnswerIcon fontSize="small" />
                                    </div>
                                    <div>
                                         <div style={{ fontSize: '15px', fontWeight: 'bold' }}>Briv<b>bia</b> Saas</div>
@@ -85,8 +85,8 @@ const MiddleSection = () => {
                          <GrowOnHoverContainer>
 
                               <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1px' }}>
-                                   <div style={{ transform: 'rotateX(20deg)', background: 'red', opacity: 0.7, borderRadius: '20%', marginRight: '20px' }}>
-                                        <AutoGraphIcon />
+                                   <div style={{ transform: 'rotateX(20deg)', background: 'red', opacity: 0.7, borderRadius: '20%', marginRight: '20px', padding: '4px' }}>
+                                        <AutoGraphIcon fontSize="small" />
                                    </div>
                                    <div>
                                         <div style={{ fontSize: '15px', fontWeight: 'bold' }}>Briv<b>bia</b> Saas</div>
@@ -97,8 +97,8 @@ const MiddleSection = () => {
                          <GrowOnHoverContainer>
 
                               <div style={{ display: 'flex', alignItems: 'center' }}>
-                                   <div style={{ transform: 'rotateX(20deg)', background: 'blue', opacity: 0.7, borderRadius: '20%', marginRight: '20px' }}>
-                                        <VerifiedUserIcon />
+                                   <div style={{ transform: 'rotateX(20deg)', background: 'blue', opacity: 0.7, borderRadius: '20%', marginRight: '20px', padding: '4px' }}>
+                                        <VerifiedUserIcon fontSize="small" />
                                    </div>
                                    <div>
                                         <div style={{ fontSize: '15px', fontWeight: 'bold' }}>Briv<b>bia</b> Saas</div>
