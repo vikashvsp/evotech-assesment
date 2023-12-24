@@ -10,6 +10,13 @@ import 'react-vertical-timeline-component/style.min.css';
 import Brightness1Icon from '@mui/icons-material/Brightness1';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import TransparentLineChart from '../../../utils/TransparentLineChart';
+
+import RedeemIcon from '@mui/icons-material/Redeem';
+import PolylineIcon from '@mui/icons-material/Polyline';
+import FingerprintIcon from '@mui/icons-material/Fingerprint';
+import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
+import CakeIcon from '@mui/icons-material/Cake';
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 const UpperSec = () => {
      const chartData = [10, 20, 15, 25, 18];
      const chartLabels = ['Label 1', 'Label 2', 'Label 3', 'Label 4', 'Label 5'];
@@ -34,13 +41,13 @@ const UpperSec = () => {
                     }}>
                          <div style={{
                               borderRadius: '10px',
-                              background: 'linear-gradient(to bottom, red 90%, white 30%)',
+                              background: 'linear-gradient(to bottom, rgba(255,0,0,0.9) 90%, white 30%)',
                               padding: '10px',
                               flex: 1,
                          }}>
                               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                                    <div>Sales Progress</div>
-                                   <div style={{ display: 'flex', backgroundColor: 'rgba(255, 255, 255, 0.5)', padding: '2px', borderRadius: '5px', height: '20px' }}>
+                                   <div style={{ display: 'flex', backgroundColor: 'rgba(255, 255, 255, 0.5s)', padding: '2px', borderRadius: '5px', height: '20px' }}>
                                         <div style={{ fontSize: '12px', marginRight: '5px' }}>Export</div>
                                         <div>
                                              <KeyboardArrowDownIcon style={{ height: '20px' }} />
@@ -75,12 +82,14 @@ const UpperSec = () => {
 
                </div>
                <div style={rightPartStyle}>
-                    <SquColAsset logo={<MenuIcon color='primary' />} backgroundColor={'white'} text={'Weekly Sales'} />
-                    <SquColAsset logo={<MenuIcon color='primary' />} backgroundColor={'white'} text={'Weekly Sales'} />
-                    <SquColAsset logo={<MenuIcon color='primary' />} backgroundColor={'white'} text={'Weekly Sales'} />
-                    <SquColAsset logo={<MenuIcon color='primary' />} backgroundColor={'white'} text={'Weekly Sales'} />
-                    <SquColAsset logo={<MenuIcon color='primary' />} backgroundColor={'white'} text={'Weekly Sales'} />
-                    <SquColAsset logo={<MenuIcon color='primary' />} backgroundColor={'white'} text={'Weekly Sales'} />
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '40px', margin: '10px', marginLeft: '45px' }}>
+                         <SquColAsset logo={<RedeemIcon color="disabled" />} backgroundColor={'white'} text={'Great Gifts'} />
+                         <SquColAsset logo={<PolylineIcon color="disabled" />} backgroundColor={'white'} text={'Great Gifts'} />
+                         <SquColAsset logo={<FingerprintIcon color="disabled" />} backgroundColor={'white'} text={'Great Gifts'} />
+                         <SquColAsset logo={<AppRegistrationIcon color="disabled" />} backgroundColor={'white'} text={'Great Gifts'} />
+                         <SquColAsset logo={<CakeIcon color="disabled" />} backgroundColor={'white'} text={'Great Gifts'} />
+                         <SquColAsset logo={<RocketLaunchIcon color="disabled" />} backgroundColor={'white'} text={'Great Gifts'} />
+                    </div>
 
                </div>
           </div>
@@ -129,9 +138,6 @@ const rightPartStyle = {
      ...commonSectionStyle,
      marginLeft: '10px',
      flex: '1',
-     display: 'grid',
-     gridTemplateColumns: 'repeat(2, 1fr)',
-     gap: '8px',
      padding: '10px',
      backgroundColor: '#f0f0f0', // Make the background color similar to left section
 
