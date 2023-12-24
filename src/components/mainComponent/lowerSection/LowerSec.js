@@ -7,6 +7,7 @@ import BorderAllTwoToneIcon from '@mui/icons-material/BorderAllTwoTone';
 import EmailTwoToneIcon from '@mui/icons-material/EmailTwoTone';
 import { BarChart } from '@mui/x-charts/BarChart';
 import { axisClasses } from '@mui/x-charts';
+import { green, orange, purple, red } from '@mui/material/colors';
 
 
 const LowerSection = () => {
@@ -111,15 +112,16 @@ const LowerSection = () => {
                          series={[
                               { dataKey: 'london', label: 'London', valueFormatter },
                               { dataKey: 'paris', label: 'Paris', valueFormatter },
+
                          ]}
                          {...chartSetting}
                     />
                </div>
                <div style={rightSectionStyle}>
-                    <SquColAsset logo={<EqualizerTwoToneIcon color='primary' />} backgroundColor={'grey'} text={'Weekly Sales'} />
-                    <SquColAsset logo={<GroupAddTwoToneIcon />} backgroundColor={'red'} text={'New Users'} />
-                    <SquColAsset logo={<BorderAllTwoToneIcon />} backgroundColor={'green'} text={'Item Orders'} />
-                    <SquColAsset logo={<EmailTwoToneIcon />} backgroundColor={'brown'} text={'Bug reports'} />
+                    <SquColAsset logo={<EqualizerTwoToneIcon sx={{ color: orange[700] }} />} backgroundColor={'rgba(255, 185, 56,0.3)'} text={'Weekly Sales'} textColor={'rgba(255, 185, 56)'} />
+                    <SquColAsset logo={<GroupAddTwoToneIcon sx={{ color: purple[700] }} />} backgroundColor={'rgba(175, 12, 245,0.3)'} text={'New Users'} textColor={'rgba(175, 12, 245)'} />
+                    <SquColAsset logo={<BorderAllTwoToneIcon sx={{ color: red[700] }} />} backgroundColor={'rgba(250, 35, 56,0.3)'} text={'Item Orders'} textColor={'rgba(250, 35, 56)'} />
+                    <SquColAsset logo={<EmailTwoToneIcon sx={{ color: green['A700'] }} />} backgroundColor={'rgba(8, 255, 201,0.2)'} text={'Bug reports'} textColor={'rgba(3, 97, 77))'} />
                </div>
           </div>
      );

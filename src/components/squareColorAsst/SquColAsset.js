@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 
-const SquColAsset = ({ logo, backgroundColor, text }) => {
+const SquColAsset = ({ logo, backgroundColor, text, textColor }) => {
      const containerRef = useRef(); // Define containerRef here
 
      const containerStyle = {
@@ -38,7 +38,7 @@ const SquColAsset = ({ logo, backgroundColor, text }) => {
                {logo && React.isValidElement(logo) ? (
                     <div style={logoStyle}>{logo}</div>
                ) : null}
-               <p>{text}</p>
+               <p style={{ color: textColor }}>{text}</p>
           </div>
      );
 };
