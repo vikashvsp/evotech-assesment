@@ -1,0 +1,11 @@
+.icon-container {
+  background-color: #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.icon-container img {
+  width: 100%;
+  display: block;
+}

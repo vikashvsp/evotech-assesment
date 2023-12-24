@@ -65,7 +65,7 @@ const LowerSection = () => {
                               <div>
                                    Recent stats
                               </div>
-                              <div>
+                              <div style={{ fontSize: '10px', opacity: 0.6 }}>
                                    More than 400+ new members
                               </div>
                          </div>
@@ -74,6 +74,7 @@ const LowerSection = () => {
                                    style={{
                                         ...tabStyle,
                                         ...(selectedTab === 'Month' ? selectedTabStyle : {}),
+                                        fontSize: '13px'
                                    }}
                                    onClick={() => setSelectedTab('Month')}
                               >
@@ -83,6 +84,8 @@ const LowerSection = () => {
                                    style={{
                                         ...tabStyle,
                                         ...(selectedTab === 'Week' ? selectedTabStyle : {}),
+                                        fontSize: '13px'
+
                                    }}
                                    onClick={() => setSelectedTab('Week')}
                               >
@@ -92,6 +95,8 @@ const LowerSection = () => {
                                    style={{
                                         ...tabStyle,
                                         ...(selectedTab === 'Day' ? selectedTabStyle : {}),
+                                        fontSize: '13px'
+
                                    }}
                                    onClick={() => setSelectedTab('Day')}
                               >
@@ -104,8 +109,8 @@ const LowerSection = () => {
                          dataset={dataset}
                          xAxis={[{ scaleType: 'band', dataKey: 'month' }]}
                          series={[
-                              { dataKey: 'london', valueFormatter },
-                              { dataKey: 'paris', valueFormatter },
+                              { dataKey: 'london', label: 'London', valueFormatter },
+                              { dataKey: 'paris', label: 'Paris', valueFormatter },
                          ]}
                          {...chartSetting}
                     />

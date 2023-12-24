@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 const SquColAsset = ({ logo, backgroundColor, text }) => {
+     const containerRef = useRef(); // Define containerRef here
+
      const containerStyle = {
           height: '100px',
           width: '100px',
@@ -9,15 +11,29 @@ const SquColAsset = ({ logo, backgroundColor, text }) => {
           padding: '2px',
           borderRadius: '8px',
           marginBottom: '2px',
+          transition: 'transform 0.3s ease-in-out',
+          cursor: 'pointer',
      };
 
      const logoStyle = {
-          marginTop: 20
-          // Add any specific styles for the logo if needed
+          marginTop: 20,
+     };
+
+     const handleHover = () => {
+          containerRef.current.style.transform = 'scale(1.1)';
+     };
+
+     const handleHoverOut = () => {
+          containerRef.current.style.transform = 'scale(1)';
      };
 
      return (
-          <div style={containerStyle}>
+          <div
+               style={containerStyle}
+               onMouseEnter={handleHover}
+               onMouseLeave={handleHoverOut}
+               ref={containerRef} // Assign containerRef to the div
+          >
                {logo && React.isValidElement(logo) ? (
                     <div style={logoStyle}>{logo}</div>
                ) : null}
